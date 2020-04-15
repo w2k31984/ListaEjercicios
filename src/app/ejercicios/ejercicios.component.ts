@@ -10,9 +10,15 @@ import {EJERCICIOS} from './collection-ejercicios';
 export class EjerciciosComponent implements OnInit {
 
   ejercicios=EJERCICIOS;
+  //Agregando una nueva propiedad
+  ejercicioSeleccionado:Ejercicio;
   constructor() {}
 
   ngOnInit(): void {
   }
-
+  //Pegamos el componente onSelectEjercicio
+  onSelectEjercicio(ejercicio:Ejercicio):void{
+  console.log("Ejercicio Seleccionado="+ejercicio.id);
+  this.ejercicioSeleccionado=ejercicio;
+}
 }
