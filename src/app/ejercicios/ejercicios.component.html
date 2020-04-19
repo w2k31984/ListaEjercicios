@@ -4,10 +4,5 @@
     <span class="ejercicio">{{ejercicio.id}}</span>{{ejercicio.name}}
   </li>
 </ul>
-<!--Creando apartado de detalle-->
-<h2>Detalle</h2>
-<div *ngIf="ejercicioSeleccionado">
-  <div><span>Id:</span>{{ejercicioSeleccionado.id}}
-       <span>Nombre Ejercicio:</span>{{ejercicioSeleccionado.name}}
-  </div>
-</div>
+<!--Agregando componente-->
+<app-ejercicio-detalle [ejercicio]="ejercicioSeleccionado"></app-ejercicio-detalle>
